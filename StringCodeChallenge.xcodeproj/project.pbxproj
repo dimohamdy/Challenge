@@ -8,11 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		3DF2AA6121A33BDA00AFD4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA6021A33BDA00AFD4D2 /* AppDelegate.swift */; };
-		3DF2AA6321A33BDA00AFD4D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA6221A33BDA00AFD4D2 /* ViewController.swift */; };
 		3DF2AA6621A33BDA00AFD4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF2AA6421A33BDA00AFD4D2 /* Main.storyboard */; };
 		3DF2AA6821A33BDC00AFD4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF2AA6721A33BDC00AFD4D2 /* Assets.xcassets */; };
 		3DF2AA6B21A33BDC00AFD4D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF2AA6921A33BDC00AFD4D2 /* LaunchScreen.storyboard */; };
 		3DF2AA7621A33BDD00AFD4D2 /* StringCodeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA7521A33BDD00AFD4D2 /* StringCodeChallengeTests.swift */; };
+		3DF2AA8121A3449700AFD4D2 /* Droid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA8021A3449700AFD4D2 /* Droid.swift */; };
+		3DF2AA8321A3BCED00AFD4D2 /* DroidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA8221A3BCEC00AFD4D2 /* DroidManager.swift */; };
+		3DF2AA9121A4B28500AFD4D2 /* DroidListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA8D21A4B28400AFD4D2 /* DroidListViewModel.swift */; };
+		3DF2AA9221A4B28500AFD4D2 /* DroidListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA8E21A4B28400AFD4D2 /* DroidListRouter.swift */; };
+		3DF2AA9321A4B28500AFD4D2 /* DroidListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA8F21A4B28400AFD4D2 /* DroidListViewController.swift */; };
+		3DF2AA9421A4B28500AFD4D2 /* DroidListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA9021A4B28400AFD4D2 /* DroidListBuilder.swift */; };
+		3DF2AA9821A4B83B00AFD4D2 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA9621A4B83B00AFD4D2 /* BaseViewModel.swift */; };
+		3DF2AA9921A4B83B00AFD4D2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA9721A4B83B00AFD4D2 /* BaseViewController.swift */; };
+		3DF2AAA121A4CB5A00AFD4D2 /* ReusableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA9B21A4CB5A00AFD4D2 /* ReusableCellView.swift */; };
+		3DF2AAA321A4CB5A00AFD4D2 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA9D21A4CB5A00AFD4D2 /* Alert.swift */; };
+		3DF2AAA421A4CB5A00AFD4D2 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA9E21A4CB5A00AFD4D2 /* Storyboard.swift */; };
+		3DF2AAA621A4CB5A00AFD4D2 /* ViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AAA021A4CB5A00AFD4D2 /* ViewBorder.swift */; };
+		3DF2AAA921A4CBB500AFD4D2 /* DroidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AAA821A4CBB500AFD4D2 /* DroidCell.swift */; };
+		3DF2AAB721A55B9D00AFD4D2 /* ControlDroidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AAB321A55B9D00AFD4D2 /* ControlDroidViewController.swift */; };
+		3DF2AAB821A55B9D00AFD4D2 /* ControlDroidRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AAB421A55B9D00AFD4D2 /* ControlDroidRouter.swift */; };
+		3DF2AAB921A55B9D00AFD4D2 /* ControlDroidViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AAB521A55B9D00AFD4D2 /* ControlDroidViewModel.swift */; };
+		3DF2AABA21A55B9D00AFD4D2 /* ControlDroidBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AAB621A55B9D00AFD4D2 /* ControlDroidBuilder.swift */; };
+		7BBEFB4008589CE13964236C /* Pods_StringCodeChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9DBF2C4DEE144D66030E25 /* Pods_StringCodeChallengeTests.framework */; };
+		801A5DA205237112248F38D8 /* Pods_StringCodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5590741077AA0C6FCCD40C /* Pods_StringCodeChallenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B5590741077AA0C6FCCD40C /* Pods_StringCodeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StringCodeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF2AA5D21A33BDA00AFD4D2 /* StringCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF2AA6021A33BDA00AFD4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DF2AA6221A33BDA00AFD4D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DF2AA6521A33BDA00AFD4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DF2AA6721A33BDC00AFD4D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DF2AA6A21A33BDC00AFD4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +54,28 @@
 		3DF2AA7121A33BDD00AFD4D2 /* StringCodeChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringCodeChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF2AA7521A33BDD00AFD4D2 /* StringCodeChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCodeChallengeTests.swift; sourceTree = "<group>"; };
 		3DF2AA7721A33BDD00AFD4D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DF2AA8021A3449700AFD4D2 /* Droid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Droid.swift; sourceTree = "<group>"; };
+		3DF2AA8221A3BCEC00AFD4D2 /* DroidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroidManager.swift; sourceTree = "<group>"; };
+		3DF2AA8D21A4B28400AFD4D2 /* DroidListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroidListViewModel.swift; sourceTree = "<group>"; };
+		3DF2AA8E21A4B28400AFD4D2 /* DroidListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroidListRouter.swift; sourceTree = "<group>"; };
+		3DF2AA8F21A4B28400AFD4D2 /* DroidListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroidListViewController.swift; sourceTree = "<group>"; };
+		3DF2AA9021A4B28400AFD4D2 /* DroidListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DroidListBuilder.swift; sourceTree = "<group>"; };
+		3DF2AA9621A4B83B00AFD4D2 /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		3DF2AA9721A4B83B00AFD4D2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3DF2AA9B21A4CB5A00AFD4D2 /* ReusableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCellView.swift; sourceTree = "<group>"; };
+		3DF2AA9D21A4CB5A00AFD4D2 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		3DF2AA9E21A4CB5A00AFD4D2 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		3DF2AAA021A4CB5A00AFD4D2 /* ViewBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewBorder.swift; sourceTree = "<group>"; };
+		3DF2AAA821A4CBB500AFD4D2 /* DroidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroidCell.swift; sourceTree = "<group>"; };
+		3DF2AAB321A55B9D00AFD4D2 /* ControlDroidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlDroidViewController.swift; sourceTree = "<group>"; };
+		3DF2AAB421A55B9D00AFD4D2 /* ControlDroidRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlDroidRouter.swift; sourceTree = "<group>"; };
+		3DF2AAB521A55B9D00AFD4D2 /* ControlDroidViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlDroidViewModel.swift; sourceTree = "<group>"; };
+		3DF2AAB621A55B9D00AFD4D2 /* ControlDroidBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlDroidBuilder.swift; sourceTree = "<group>"; };
+		4A9DBF2C4DEE144D66030E25 /* Pods_StringCodeChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StringCodeChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FE231E463815B789A7BDDF8 /* Pods-StringCodeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StringCodeChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StringCodeChallenge/Pods-StringCodeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		87EB2C699F5CA9EE9DAE857C /* Pods-StringCodeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StringCodeChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-StringCodeChallenge/Pods-StringCodeChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		884FF186AA82815CE10EB8F2 /* Pods-StringCodeChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StringCodeChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StringCodeChallengeTests/Pods-StringCodeChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		F326F657A595545436D5CB90 /* Pods-StringCodeChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StringCodeChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StringCodeChallengeTests/Pods-StringCodeChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				801A5DA205237112248F38D8 /* Pods_StringCodeChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BBEFB4008589CE13964236C /* Pods_StringCodeChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +104,8 @@
 				3DF2AA5F21A33BDA00AFD4D2 /* StringCodeChallenge */,
 				3DF2AA7421A33BDD00AFD4D2 /* StringCodeChallengeTests */,
 				3DF2AA5E21A33BDA00AFD4D2 /* Products */,
+				FF3132F97FD2977333430762 /* Pods */,
+				AC16E63B534B5B9108EDE306 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,11 +122,14 @@
 			isa = PBXGroup;
 			children = (
 				3DF2AA6021A33BDA00AFD4D2 /* AppDelegate.swift */,
-				3DF2AA6221A33BDA00AFD4D2 /* ViewController.swift */,
 				3DF2AA6421A33BDA00AFD4D2 /* Main.storyboard */,
+				3DF2AA9A21A4CB5A00AFD4D2 /* Common */,
+				3DF2AA9521A4B2BB00AFD4D2 /* Scene */,
+				3DF2AA8221A3BCEC00AFD4D2 /* DroidManager.swift */,
 				3DF2AA6721A33BDC00AFD4D2 /* Assets.xcassets */,
 				3DF2AA6921A33BDC00AFD4D2 /* LaunchScreen.storyboard */,
 				3DF2AA6C21A33BDC00AFD4D2 /* Info.plist */,
+				3DF2AA8021A3449700AFD4D2 /* Droid.swift */,
 			);
 			path = StringCodeChallenge;
 			sourceTree = "<group>";
@@ -96,6 +143,79 @@
 			path = StringCodeChallengeTests;
 			sourceTree = "<group>";
 		};
+		3DF2AA8C21A4B28400AFD4D2 /* DroidList */ = {
+			isa = PBXGroup;
+			children = (
+				3DF2AAA721A4CB9500AFD4D2 /* Cell */,
+				3DF2AA8D21A4B28400AFD4D2 /* DroidListViewModel.swift */,
+				3DF2AA8E21A4B28400AFD4D2 /* DroidListRouter.swift */,
+				3DF2AA8F21A4B28400AFD4D2 /* DroidListViewController.swift */,
+				3DF2AA9021A4B28400AFD4D2 /* DroidListBuilder.swift */,
+			);
+			path = DroidList;
+			sourceTree = "<group>";
+		};
+		3DF2AA9521A4B2BB00AFD4D2 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				3DF2AA9721A4B83B00AFD4D2 /* BaseViewController.swift */,
+				3DF2AA9621A4B83B00AFD4D2 /* BaseViewModel.swift */,
+				3DF2AA8C21A4B28400AFD4D2 /* DroidList */,
+				3DF2AAB221A55B9D00AFD4D2 /* ControlDroid */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		3DF2AA9A21A4CB5A00AFD4D2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3DF2AA9B21A4CB5A00AFD4D2 /* ReusableCellView.swift */,
+				3DF2AA9D21A4CB5A00AFD4D2 /* Alert.swift */,
+				3DF2AA9E21A4CB5A00AFD4D2 /* Storyboard.swift */,
+				3DF2AAA021A4CB5A00AFD4D2 /* ViewBorder.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3DF2AAA721A4CB9500AFD4D2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3DF2AAA821A4CBB500AFD4D2 /* DroidCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3DF2AAB221A55B9D00AFD4D2 /* ControlDroid */ = {
+			isa = PBXGroup;
+			children = (
+				3DF2AAB321A55B9D00AFD4D2 /* ControlDroidViewController.swift */,
+				3DF2AAB421A55B9D00AFD4D2 /* ControlDroidRouter.swift */,
+				3DF2AAB521A55B9D00AFD4D2 /* ControlDroidViewModel.swift */,
+				3DF2AAB621A55B9D00AFD4D2 /* ControlDroidBuilder.swift */,
+			);
+			path = ControlDroid;
+			sourceTree = "<group>";
+		};
+		AC16E63B534B5B9108EDE306 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B5590741077AA0C6FCCD40C /* Pods_StringCodeChallenge.framework */,
+				4A9DBF2C4DEE144D66030E25 /* Pods_StringCodeChallengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF3132F97FD2977333430762 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5FE231E463815B789A7BDDF8 /* Pods-StringCodeChallenge.debug.xcconfig */,
+				87EB2C699F5CA9EE9DAE857C /* Pods-StringCodeChallenge.release.xcconfig */,
+				F326F657A595545436D5CB90 /* Pods-StringCodeChallengeTests.debug.xcconfig */,
+				884FF186AA82815CE10EB8F2 /* Pods-StringCodeChallengeTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DF2AA7A21A33BDD00AFD4D2 /* Build configuration list for PBXNativeTarget "StringCodeChallenge" */;
 			buildPhases = (
+				2A3307612DE7F968788BE1E1 /* [CP] Check Pods Manifest.lock */,
 				3DF2AA5921A33BDA00AFD4D2 /* Sources */,
 				3DF2AA5A21A33BDA00AFD4D2 /* Frameworks */,
 				3DF2AA5B21A33BDA00AFD4D2 /* Resources */,
+				87FC4B9C0B3F92D1B51D3C5E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DF2AA7D21A33BDD00AFD4D2 /* Build configuration list for PBXNativeTarget "StringCodeChallengeTests" */;
 			buildPhases = (
+				CBA1D9AC58F481A2C4A5671A /* [CP] Check Pods Manifest.lock */,
 				3DF2AA6D21A33BDD00AFD4D2 /* Sources */,
 				3DF2AA6E21A33BDD00AFD4D2 /* Frameworks */,
 				3DF2AA6F21A33BDD00AFD4D2 /* Resources */,
@@ -192,13 +315,94 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A3307612DE7F968788BE1E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StringCodeChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87FC4B9C0B3F92D1B51D3C5E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StringCodeChallenge/Pods-StringCodeChallenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StringCodeChallenge/Pods-StringCodeChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBA1D9AC58F481A2C4A5671A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StringCodeChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3DF2AA5921A33BDA00AFD4D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DF2AA6321A33BDA00AFD4D2 /* ViewController.swift in Sources */,
+				3DF2AABA21A55B9D00AFD4D2 /* ControlDroidBuilder.swift in Sources */,
+				3DF2AA9321A4B28500AFD4D2 /* DroidListViewController.swift in Sources */,
+				3DF2AAB921A55B9D00AFD4D2 /* ControlDroidViewModel.swift in Sources */,
+				3DF2AA8121A3449700AFD4D2 /* Droid.swift in Sources */,
+				3DF2AA8321A3BCED00AFD4D2 /* DroidManager.swift in Sources */,
+				3DF2AA9221A4B28500AFD4D2 /* DroidListRouter.swift in Sources */,
+				3DF2AAB821A55B9D00AFD4D2 /* ControlDroidRouter.swift in Sources */,
+				3DF2AAA421A4CB5A00AFD4D2 /* Storyboard.swift in Sources */,
+				3DF2AA9921A4B83B00AFD4D2 /* BaseViewController.swift in Sources */,
+				3DF2AAA921A4CBB500AFD4D2 /* DroidCell.swift in Sources */,
+				3DF2AAA121A4CB5A00AFD4D2 /* ReusableCellView.swift in Sources */,
+				3DF2AAA321A4CB5A00AFD4D2 /* Alert.swift in Sources */,
+				3DF2AAA621A4CB5A00AFD4D2 /* ViewBorder.swift in Sources */,
+				3DF2AAB721A55B9D00AFD4D2 /* ControlDroidViewController.swift in Sources */,
+				3DF2AA9821A4B83B00AFD4D2 /* BaseViewModel.swift in Sources */,
 				3DF2AA6121A33BDA00AFD4D2 /* AppDelegate.swift in Sources */,
+				3DF2AA9421A4B28500AFD4D2 /* DroidListBuilder.swift in Sources */,
+				3DF2AA9121A4B28500AFD4D2 /* DroidListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +562,7 @@
 		};
 		3DF2AA7B21A33BDD00AFD4D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FE231E463815B789A7BDDF8 /* Pods-StringCodeChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +581,7 @@
 		};
 		3DF2AA7C21A33BDD00AFD4D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87EB2C699F5CA9EE9DAE857C /* Pods-StringCodeChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +600,7 @@
 		};
 		3DF2AA7E21A33BDD00AFD4D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F326F657A595545436D5CB90 /* Pods-StringCodeChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +622,7 @@
 		};
 		3DF2AA7F21A33BDD00AFD4D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 884FF186AA82815CE10EB8F2 /* Pods-StringCodeChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
