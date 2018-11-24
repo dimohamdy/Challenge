@@ -11,10 +11,10 @@ import RxSwift
 import RxCocoa
 
 class ControlDroidViewController: UITableViewController {
-    var viewModel: ControlDroidViewModel
-    var router: ControlDroidRouter
+    var viewModel: ControlDroidViewModel!
+    var router: ControlDroidRouter!
     fileprivate let disposeBag = DisposeBag()
-
+    
     @IBOutlet weak var droidNameLabel: UILabel!
     @IBOutlet weak var currentSectorLabel: UILabel!
     @IBOutlet weak var droidStateLabel: UILabel!
@@ -22,51 +22,60 @@ class ControlDroidViewController: UITableViewController {
     
     @IBOutlet weak var xOfSectorTF: UITextField!
     @IBOutlet weak var yOfSectorTF: UITextField!
-
-//    init(withViewModel viewModel: ControlDroidViewModel, router: ControlDroidRouter) {
-//        self.viewModel = viewModel
-//        self.router = router
-//        super.init(nibName: nil, bundle: nil)
-//    }
-
+    
+    
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupViews()
-        setupLayout()
-        setupRx()
+        bindViewModel()
     }
-    
-    
-    
+
     @IBAction func moveForward(_ sender: UIButton) {
+        viewModel.move(direction: .forward)
     }
     @IBAction func moveLeft(_ sender: UIButton) {
+        viewModel.move(direction: .left)
     }
     @IBAction func moveRight(_ sender: UIButton) {
+        viewModel.move(direction: .right)
     }
     @IBAction func moveBack(_ sender: UIButton) {
+        viewModel.move(direction: .back)
     }
     @IBAction func moveToSector(_ sender: UIButton) {
+        viewModel.move()
     }
-}
+    
+    func bindViewModel() {
+        
+        
+        bind(label: droidNameLabel, to: viewModel.droidNameObservable)
+        bind(label: droidStateLabel, to: viewModel.stateObservable)
+        
+        bind(label: currentSectorLabel, to: viewModel.currentSectorObservable)
 
-// MARK: Setup
-private extension ControlDroidViewController {
+        bind(label: droidNameLabel, to: viewModel.droidNameObservable)
 
-    func setupViews() {
+        bind(textField: xOfSectorTF, to: viewModel.xSectorInput)
+        bind(textField: yOfSectorTF, to: viewModel.ySectorInput)
+        
         
     }
-
-    func setupLayout() {
     
+    private func bind(label: UILabel, to observable: Observable<String?>) {
+        observable
+            .bind(to: label.rx.text)
+            .disposed(by: disposeBag)
     }
-
-    func setupRx() {
     
+    
+    private func bind(textField: UITextField, to variable: Variable<String?>) {
+        variable.asObservable().bind(to: textField.rx.text)
+            .disposed(by: disposeBag)
+        
+        textField.rx.text.bind(to: variable).disposed(by: disposeBag)
     }
 }

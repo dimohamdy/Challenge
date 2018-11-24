@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="43E-LY-I0s">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,30 +13,34 @@
         <!--List of Droids-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DroidListViewController" customModule="StringCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DroidListViewController" id="BYZ-38-t0r" customClass="DroidListViewController" customModule="StringCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8mS-bg-4k2">
-                                <rect key="frame" x="0.0" y="149" width="375" height="518"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8mS-bg-4k2">
+                                <rect key="frame" x="0.0" y="51" width="375" height="616"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="96" id="ehv-HQ-8TW" customClass="DroidCell" customModule="StringCodeChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="96"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DroidCell" rowHeight="60" id="ehv-HQ-8TW" customClass="DroidCell" customModule="StringCodeChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ehv-HQ-8TW" id="rd7-h9-Bqs">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="95.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu0-VU-cAF">
-                                                    <rect key="frame" x="32" y="40" width="113" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="60" translatesAutoresizingMaskIntoConstraints="NO" id="fu0-VU-cAF">
+                                                    <rect key="frame" x="10" y="19.5" width="113" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fu0-VU-cAF" firstAttribute="centerY" secondItem="rd7-h9-Bqs" secondAttribute="centerY" id="Sxv-Ay-Er1"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fu0-VU-cAF" secondAttribute="trailing" symbolic="YES" id="VbA-gX-IaO"/>
+                                                <constraint firstItem="fu0-VU-cAF" firstAttribute="leading" secondItem="rd7-h9-Bqs" secondAttribute="leading" constant="10" id="zOY-ng-CxW"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="droidIndexLabel" destination="fu0-VU-cAF" id="WyW-uW-hJA"/>
@@ -44,8 +48,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Number of Current Drons 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTM-ru-LjM">
-                                <rect key="frame" x="79" y="104" width="217" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Current Drons 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTM-ru-LjM">
+                                <rect key="frame" x="79" y="20" width="217" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,14 +60,15 @@
                             <constraint firstItem="8mS-bg-4k2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Ch-F5-gHz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8mS-bg-4k2" secondAttribute="trailing" id="Fhy-kw-880"/>
                             <constraint firstItem="8mS-bg-4k2" firstAttribute="top" secondItem="hTM-ru-LjM" secondAttribute="bottom" constant="10" id="I3b-5o-r7B"/>
+                            <constraint firstItem="hTM-ru-LjM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fcU-1D-tlp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8mS-bg-4k2" secondAttribute="bottom" id="lCI-pu-dtT"/>
+                            <constraint firstItem="hTM-ru-LjM" firstAttribute="centerX" secondItem="8mS-bg-4k2" secondAttribute="centerX" id="y1Y-6Q-FkA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="List of Droids" id="Crh-sg-H7O"/>
                     <connections>
                         <outlet property="droidTableView" destination="8mS-bg-4k2" id="s0J-Vb-ZwR"/>
-                        <segue destination="4Bz-ld-jyY" kind="show" identifier="ControlDroid" id="0St-oa-XL8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -73,7 +78,7 @@
         <!--Control Droid View Controller-->
         <scene sceneID="gPo-lb-6r7">
             <objects>
-                <tableViewController id="4Bz-ld-jyY" customClass="ControlDroidViewController" customModule="StringCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ControlDroidViewController" id="4Bz-ld-jyY" customClass="ControlDroidViewController" customModule="StringCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mat-YM-QPx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -334,25 +339,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKN-MY-9hO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2560.8000000000002" y="-299.10044977511245"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="spx-Hr-g4K">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="43E-LY-I0s" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DbX-9A-Str">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dUD-J3-tFz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8fH-Yh-NcM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2082" y="134"/>
         </scene>
     </scenes>
     <resources>

@@ -11,15 +11,10 @@ import RxSwift
 import RxCocoa
 
 class DroidListViewController: BaseViewController {
-    var viewModel: DroidListViewModel = DroidListViewModel()
-    var router: DroidListRouter = DroidListRouter()
+    var viewModel: DroidListViewModel!
+    var router: DroidListRouter!
 
     @IBOutlet weak var droidTableView: UITableView!
-//    init(withViewModel viewModel: DroidListViewModel, router: DroidListRouter) {
-//        self.viewModel = viewModel
-//        self.router = router
-//        super.init(nibName: nil, bundle: nil)
-//    }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -27,17 +22,17 @@ class DroidListViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setupRx(viewModel: viewModel)
+        setupRx(viewModel: viewModel)
         
+        
+        setupCellSelect()
     }
     override func setupRx(viewModel: BaseViewModel){
         super.setupRx(viewModel: viewModel)
         
-        self.viewModel.droisObservable.bind(to: self.droidTableView.rx.items) { [weak self] tableView, index, element in
+        self.viewModel.droisObservable.bind(to: self.droidTableView.rx.items) { tableView, index, element in
             let indexPath = IndexPath(item: index, section: 0)
-            
-            
-            
+ 
             
             switch element {
                 

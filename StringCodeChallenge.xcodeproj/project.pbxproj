@@ -29,6 +29,7 @@
 		3DF2AAB821A55B9D00AFD4D2 /* ControlDroidRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AAB421A55B9D00AFD4D2 /* ControlDroidRouter.swift */; };
 		3DF2AAB921A55B9D00AFD4D2 /* ControlDroidViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AAB521A55B9D00AFD4D2 /* ControlDroidViewModel.swift */; };
 		3DF2AABA21A55B9D00AFD4D2 /* ControlDroidBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AAB621A55B9D00AFD4D2 /* ControlDroidBuilder.swift */; };
+		3DF2AABC21A6092400AFD4D2 /* SimulatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AABB21A6092400AFD4D2 /* SimulatorManager.swift */; };
 		7BBEFB4008589CE13964236C /* Pods_StringCodeChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9DBF2C4DEE144D66030E25 /* Pods_StringCodeChallengeTests.framework */; };
 		801A5DA205237112248F38D8 /* Pods_StringCodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5590741077AA0C6FCCD40C /* Pods_StringCodeChallenge.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		3DF2AAB421A55B9D00AFD4D2 /* ControlDroidRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlDroidRouter.swift; sourceTree = "<group>"; };
 		3DF2AAB521A55B9D00AFD4D2 /* ControlDroidViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlDroidViewModel.swift; sourceTree = "<group>"; };
 		3DF2AAB621A55B9D00AFD4D2 /* ControlDroidBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlDroidBuilder.swift; sourceTree = "<group>"; };
+		3DF2AABB21A6092400AFD4D2 /* SimulatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorManager.swift; sourceTree = "<group>"; };
 		4A9DBF2C4DEE144D66030E25 /* Pods_StringCodeChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StringCodeChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FE231E463815B789A7BDDF8 /* Pods-StringCodeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StringCodeChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StringCodeChallenge/Pods-StringCodeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		87EB2C699F5CA9EE9DAE857C /* Pods-StringCodeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StringCodeChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-StringCodeChallenge/Pods-StringCodeChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,11 +127,12 @@
 				3DF2AA6421A33BDA00AFD4D2 /* Main.storyboard */,
 				3DF2AA9A21A4CB5A00AFD4D2 /* Common */,
 				3DF2AA9521A4B2BB00AFD4D2 /* Scene */,
+				3DF2AA8021A3449700AFD4D2 /* Droid.swift */,
 				3DF2AA8221A3BCEC00AFD4D2 /* DroidManager.swift */,
+				3DF2AABB21A6092400AFD4D2 /* SimulatorManager.swift */,
 				3DF2AA6721A33BDC00AFD4D2 /* Assets.xcassets */,
 				3DF2AA6921A33BDC00AFD4D2 /* LaunchScreen.storyboard */,
 				3DF2AA6C21A33BDC00AFD4D2 /* Info.plist */,
-				3DF2AA8021A3449700AFD4D2 /* Droid.swift */,
 			);
 			path = StringCodeChallenge;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				3DF2AAB821A55B9D00AFD4D2 /* ControlDroidRouter.swift in Sources */,
 				3DF2AAA421A4CB5A00AFD4D2 /* Storyboard.swift in Sources */,
 				3DF2AA9921A4B83B00AFD4D2 /* BaseViewController.swift in Sources */,
+				3DF2AABC21A6092400AFD4D2 /* SimulatorManager.swift in Sources */,
 				3DF2AAA921A4CBB500AFD4D2 /* DroidCell.swift in Sources */,
 				3DF2AAA121A4CB5A00AFD4D2 /* ReusableCellView.swift in Sources */,
 				3DF2AAA321A4CB5A00AFD4D2 /* Alert.swift in Sources */,

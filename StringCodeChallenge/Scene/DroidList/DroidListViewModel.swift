@@ -14,8 +14,9 @@ enum DroidTableViewCellType {
     case empty
 }
 
-class DroidListViewModel {
+class DroidListViewModel :BaseViewModel{
     
+    var droidManager:DroidManager!
     // input
     var droisObservable: Observable<[DroidTableViewCellType]> {
         return droidList.asObservable()
@@ -26,7 +27,9 @@ class DroidListViewModel {
     // output
     // internal
     
-    init() {
+    init(droidManager:DroidManager) {
+        super.init()
+        self.droidManager = droidManager
         setupRx()
     }
     
@@ -37,26 +40,20 @@ class DroidListViewModel {
 private extension DroidListViewModel {
     
     func setupRx() {
-
-        DroidManager.getCurrentlyDispatchedDroids { [weak self] droids in
+        
+        droidManager.getCurrentlyDispatchedDroids { [weak self] droids in
             
             guard droids.count > 0 else {
                 self?.droidList.value = [.empty]
                 return
             }
-            
-            
             var array:[DroidTableViewCellType] = [DroidTableViewCellType]()
-            
-            
             for droid in droids {
                 
-                    array.append(.droid(cellViewModel: droid))
-                }
-            self?.droidList.value = array
-
+                array.append(.droid(cellViewModel: droid))
             }
-        
+            self?.droidList.value = array
             
         }
     }
+}

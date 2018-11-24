@@ -10,8 +10,8 @@ import UIKit
 
 struct DroidListBuilder {
 
-    static func viewController() -> DroidListViewController {
-        let viewModel = DroidListViewModel()
+    private static func viewController(droidManger:DroidManager) -> DroidListViewController {
+        let viewModel = DroidListViewModel(droidManager: droidManger)
         let router = DroidListRouter()
         let viewController: DroidListViewController = DroidListViewController.instantiateFromStoryboard(.Main)
         router.viewController = viewController
@@ -20,5 +20,11 @@ struct DroidListBuilder {
         viewController.viewModel = viewModel
 
         return viewController
+    }
+    
+    
+    static func navigationController(droidManger:DroidManager) -> UINavigationController {
+        
+        return UINavigationController(rootViewController: DroidListBuilder.viewController(droidManger: droidManger))
     }
 }

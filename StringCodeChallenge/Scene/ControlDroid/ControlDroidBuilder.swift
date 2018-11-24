@@ -16,8 +16,10 @@ struct ControlDroidBuilder {
         let viewController: ControlDroidViewController = ControlDroidViewController.instantiateFromStoryboard(.Main)
 
         router.viewController = viewController
-        viewController.viewModel = ControlDroidViewModel()
+        viewController.viewModel = ControlDroidViewModel(droid: droid)
         viewController.router = router
         return viewController
     }
+    
+
 }

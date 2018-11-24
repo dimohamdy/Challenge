@@ -13,9 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+
+        let droidManager = DroidManager(simulatorManager: SimulatorManager.shared)
+
+        self.window?.rootViewController = DroidListBuilder.navigationController(droidManger:droidManager)
+        
+        self.window?.makeKeyAndVisible()
+
         return true
     }
 
