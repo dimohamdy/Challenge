@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DC3F52821A98C65005553A2 /* DroidTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC3F52721A98C65005553A2 /* DroidTest.swift */; };
 		3DF2AA6121A33BDA00AFD4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF2AA6021A33BDA00AFD4D2 /* AppDelegate.swift */; };
 		3DF2AA6621A33BDA00AFD4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF2AA6421A33BDA00AFD4D2 /* Main.storyboard */; };
 		3DF2AA6821A33BDC00AFD4D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF2AA6721A33BDC00AFD4D2 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		0B5590741077AA0C6FCCD40C /* Pods_StringCodeChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StringCodeChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DC3F52721A98C65005553A2 /* DroidTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroidTest.swift; sourceTree = "<group>"; };
 		3DF2AA5D21A33BDA00AFD4D2 /* StringCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StringCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF2AA6021A33BDA00AFD4D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DF2AA6521A33BDA00AFD4D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				3DF2AA7521A33BDD00AFD4D2 /* StringCodeChallengeTests.swift */,
+				3DC3F52721A98C65005553A2 /* DroidTest.swift */,
 				3DF2AA7721A33BDD00AFD4D2 /* Info.plist */,
 			);
 			path = StringCodeChallengeTests;
@@ -430,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC3F52821A98C65005553A2 /* DroidTest.swift in Sources */,
 				3DF2AA7621A33BDD00AFD4D2 /* StringCodeChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

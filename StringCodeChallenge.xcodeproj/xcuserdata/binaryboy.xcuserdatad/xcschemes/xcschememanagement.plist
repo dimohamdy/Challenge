@@ -9,6 +9,24 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>StringCodeChallengeTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>3DF2AA5C21A33BDA00AFD4D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3DF2AA7021A33BDD00AFD4D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>
