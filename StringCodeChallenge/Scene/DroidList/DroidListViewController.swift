@@ -22,10 +22,34 @@ class DroidListViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        // Create the info button
+        let infoButton = UIButton(type: .infoLight)
+        infoButton.addTarget(self, action: #selector(getInfoAction), for: .touchUpInside)
+        
+        let infoBarButtonItem = UIBarButtonItem(customView: infoButton)
+        
+        // Use it as required
+        navigationItem.rightBarButtonItem = infoBarButtonItem
+        
+        
         setupRx(viewModel: viewModel)
         
         
         setupCellSelect()
+    }
+    @objc func getInfoAction(sender: UIBarButtonItem) {
+        // do stuff
+        
+        let hintAlert = SingleButtonAlert(
+            title: "Hint",
+            message: "R2D2 in sector (\(SimulatorManager.shared.R2D2Sector.x),\(SimulatorManager.shared.R2D2Sector.y)).",
+            action: AlertAction(buttonTitle: "OK", handler: nil)
+        )
+        self.presentSingleButtonDialog(alert: hintAlert)
+        
+        
     }
     override func setupRx(viewModel: BaseViewModel){
         super.setupRx(viewModel: viewModel)

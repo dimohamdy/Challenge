@@ -47,6 +47,17 @@ final class SimulatorManager {
     var matrix:Matrix<Bool>!
     
     static let shared = SimulatorManager()
+    
+    private var randomX:Int{
+        return random
+    }
+    private var randomY:Int{
+        return random
+    }
+    
+    var R2D2Sector:Sector!
+    
+    
     init() {
         
         for index in  0..<numberOfDroid {
@@ -55,14 +66,15 @@ final class SimulatorManager {
 
             let droid = Droid(index:index, curretSector:curretSector, currentState:.none)
             droids.append(droid)
-
         }
-        
         
         //create the matrixz
          matrix = Matrix(rows: gridSize, columns: gridSize,defaultValue:false)
 
         //add the R2-D2 in random sector
-        matrix[random,random] = true
+        R2D2Sector = Sector(x: randomX, y: randomY)
+        
+        print(R2D2Sector)
+        matrix[R2D2Sector.x,R2D2Sector.y] = true
     }
 }
