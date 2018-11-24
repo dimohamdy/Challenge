@@ -49,7 +49,7 @@ final class SimulatorManager {
     static let shared = SimulatorManager()
     init() {
         
-        for index in  0...numberOfDroid {
+        for index in  0..<numberOfDroid {
             
             let curretSector = Sector(x:0,y: index * (step - 1))
 
