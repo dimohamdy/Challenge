@@ -8,19 +8,24 @@
 
 import Foundation
 
-struct Droid {
+class Droid {
+    var index:Int = 0
     var curretSector:Sector
     var currentState:State = .none
-    var index:Int
-    
-    
-    
-    mutating func move(newSector:Sector,completioan:(_ state:State) -> Void) {
-        
+    init(index:Int,curretSector:Sector,currentState:State = .none) {
+        self.index = index
+        self.curretSector = curretSector
+        self.currentState = currentState
+
+    }
+     func move(newSector:Sector,completioan:(_ state:State) -> Void) {
+        sleep(1)
+        currentState = .reciveCommand
         completioan(.reciveCommand)
         
         switch  self.currentState {
         case .stillMove :
+            currentState = .stillMove
             completioan(.stillMove)
         default:
             break
@@ -29,17 +34,53 @@ struct Droid {
 
         //begin move
         
-        
-        
         //arrive and check the the state of R2_D2
-        completioan(.stateOfR2D2(found: true))
-
+        sleep(1)
+       let foundOfR2D2 =   SimulatorManager.shared.matrix[newSector.x,newSector.y]
+        currentState = .stateOfR2D2(found: foundOfR2D2)
+       completioan(.stateOfR2D2(found: foundOfR2D2))
 
     }
     
     func getStateOfR2ForCurretSector()->State{
         return currentState
     }
+    
+    
+    func moveForward() -> Sector {
+        let y = self.curretSector.y - 1
+        if SimulatorManager.shared.matrix.indexIsValid(row: self.curretSector.x, column: y) {
+            return Sector(x: self.curretSector.x,y: y)
+        }
+        return curretSector
+
+    }
+    func moveBack()  -> Sector  {
+        let y = self.curretSector.y + 1
+        if SimulatorManager.shared.matrix.indexIsValid(row:self.curretSector.x, column: y) {
+            return Sector(x: self.curretSector.x,y: y)
+        }
+        return curretSector
+
+    }
+    
+    func moveLeft()  -> Sector  {
+        let x = self.curretSector.x - 1
+        if SimulatorManager.shared.matrix.indexIsValid(row:x, column: self.curretSector.y) {
+        return Sector(x:x,y:  self.curretSector.y)
+        }
+        return curretSector
+
+    }
+    func moveRight()  -> Sector  {
+        let x = self.curretSector.x + 1
+        if SimulatorManager.shared.matrix.indexIsValid(row:x, column: self.curretSector.y) {
+
+        return Sector(x:x,y:  self.curretSector.y)
+        }
+        return curretSector
+    }
+    
 }
 
 
