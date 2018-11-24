@@ -100,6 +100,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DC3F52521A98802005553A2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3DF2AA8221A3BCEC00AFD4D2 /* DroidManager.swift */,
+				3DF2AABB21A6092400AFD4D2 /* SimulatorManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		3DC3F52621A9880F005553A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3DF2AA8021A3449700AFD4D2 /* Droid.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3DF2AA5421A33BDA00AFD4D2 = {
 			isa = PBXGroup;
 			children = (
@@ -127,9 +144,8 @@
 				3DF2AA6421A33BDA00AFD4D2 /* Main.storyboard */,
 				3DF2AA9A21A4CB5A00AFD4D2 /* Common */,
 				3DF2AA9521A4B2BB00AFD4D2 /* Scene */,
-				3DF2AA8021A3449700AFD4D2 /* Droid.swift */,
-				3DF2AA8221A3BCEC00AFD4D2 /* DroidManager.swift */,
-				3DF2AABB21A6092400AFD4D2 /* SimulatorManager.swift */,
+				3DC3F52621A9880F005553A2 /* Models */,
+				3DC3F52521A98802005553A2 /* Managers */,
 				3DF2AA6721A33BDC00AFD4D2 /* Assets.xcassets */,
 				3DF2AA6921A33BDC00AFD4D2 /* LaunchScreen.storyboard */,
 				3DF2AA6C21A33BDC00AFD4D2 /* Info.plist */,
