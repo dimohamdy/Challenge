@@ -15,16 +15,15 @@ struct Sector {
 
 
 class DroidManager {
-    
-    static func getCurrentlyDispatchedDroids(completioan:(_ droidsNumber:[Droid]) -> Void) {
-        let droids:[Droid] = [Droid]()
+    let simulatorManager:SimulatorManager!
+    init(simulatorManager:SimulatorManager) {
+        self.simulatorManager = simulatorManager
+    }
+    func getCurrentlyDispatchedDroids(completioan:(_ droidsNumber:[Droid]) -> Void) {
+        let droids:[Droid] = simulatorManager.droids
+        
         completioan(droids)
     }
-    
-    
-    static func moveToSector(sector:Sector){
-        
-        sleep(3)
-    }
+
 }
 
