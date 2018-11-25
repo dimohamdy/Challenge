@@ -81,17 +81,17 @@ class Droid {
         }
         return curretSector
     }
-    func cost(droid:Droid) -> Int{
+    private func cost(droid:Droid) -> Int{
         let x = abs(droid.curretSector.x - self.curretSector.x)
         let y = abs(droid.curretSector.y - self.curretSector.y)
         
         return  x + y
     }
     
-    func getNeaestDroid() -> Droid{
+    func getNeaestDroid(droidList:[Droid]) -> Droid{
         
 
-        let droids:[Droid] = SimulatorManager.shared.droids
+        let droids:[Droid] = droidList
         
         var tempDroid:Droid = self
         var tempCost = Int.max

@@ -85,7 +85,7 @@ class ControlDroidViewModel:BaseViewModel {
     }
 
     func getValidatorDroid() -> Droid {
-        return droid.getNeaestDroid()
+        return droid.getNeaestDroid(droidList: SimulatorManager.shared.droids)
     }
      func move(){
         guard let x = Int(self.xSectorInput.value ?? ""),let y = Int(self.ySectorInput.value ?? "") else {
