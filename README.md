@@ -19,9 +19,16 @@ I simulate "Droid Communication System" with SimulatorManager Class that simulat
 1-list dorids in a tableView 
 2-hint button to know where the R2D2 for testing purpose
 ### second screen
- 1-show details of selected droid like index,current sector and state 
+ 1-show details of selected droid like index, current sector, and state 
  2-control the droid moving in 4 direction
- 3-move automatic to sector 
- 4-if the droid detect R2D2 the system search in android list about nearest one and move it to the sector to validate the exit of R2D2
+ 3-move automatic to a sector 
+ 4-if the droid detect R2D2 the system search in droid list about nearest one and move it to the sector to validate the exit of R2D2
+
+
+![Localize](https://github.com/dimohamdy/Challenge/blob/master/Screen/screen1.png)
+
+![Localize](https://github.com/dimohamdy/Challenge/blob/master/Screen/screen2.png)
+
+![Localize](https://github.com/dimohamdy/Challenge/blob/master/Screen/screen3.png)
 
 
