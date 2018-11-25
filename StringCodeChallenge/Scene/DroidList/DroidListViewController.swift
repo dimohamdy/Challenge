@@ -34,9 +34,7 @@ class DroidListViewController: BaseViewController {
         navigationItem.rightBarButtonItem = infoBarButtonItem
         
         
-        setupRx(viewModel: viewModel)
-        
-        
+        setupRx(viewModel: viewModel)        
         setupCellSelect()
     }
     @objc func getInfoAction(sender: UIBarButtonItem) {

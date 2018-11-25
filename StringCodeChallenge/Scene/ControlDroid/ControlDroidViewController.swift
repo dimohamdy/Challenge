@@ -62,9 +62,38 @@ class ControlDroidViewController: UITableViewController {
         bind(textField: xOfSectorTF, to: viewModel.xSectorInput)
         bind(textField: yOfSectorTF, to: viewModel.ySectorInput)
         
+        viewModel.foundR2D2Observable.filter { found -> Bool in
+            found == true
+            }.subscribe(onNext: { [weak self] _ in
+                //show
+
+                self?.askUserToPickupDroid()
+            }).disposed(by: disposeBag)
+    }
+    private func askUserToPickupDroid(){
+        
+        let alert = UIAlertController(title: "Pick Droid", message: "R2D2 is found in sector (\(SimulatorManager.shared.R2D2Sector.x),\(SimulatorManager.shared.R2D2Sector.y) are you need to validate i will pickup nearest droid to validate exitsing of R2D2).", preferredStyle: .alert)
+        
+        let okAction =  UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _ in
+            
+            guard let droid = self?.viewModel.getValidatorDroid(),let sector = self?.viewModel.droid.curretSector else {
+                return
+            }
+            
+            self?.viewModel = ControlDroidViewModel(droid: droid)
+            self?.bindViewModel()
+            self?.viewModel.move(to: sector)
+            
+        })
+        
+        let noAction =  UIAlertAction(title: "No", style: .default, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(noAction)
+        
+        self.present(alert, animated: true)
+        
         
     }
-    
     private func bind(label: UILabel, to observable: Observable<String?>) {
         observable
             .bind(to: label.rx.text)

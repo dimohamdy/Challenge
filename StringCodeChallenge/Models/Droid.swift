@@ -80,7 +80,41 @@ class Droid {
         }
         return curretSector
     }
+    func cost(droid:Droid) -> Int{
+        let x = abs(droid.curretSector.x - self.curretSector.x)
+        let y = abs(droid.curretSector.y - self.curretSector.y)
+        
+        return  x + y
+    }
     
+    func getNeaestDroid() -> Droid{
+        
+
+        let droids:[Droid] = SimulatorManager.shared.droids
+        
+        var tempDroid:Droid = self
+        var tempCost = Int.max
+        
+        for droid in droids {
+            //get the between the current droid and other droid
+         
+            
+            if droid.index == self.index {
+                continue
+            }
+            
+            let costValue = cost(droid: droid)
+
+            if  costValue < tempCost {
+                tempDroid = droid
+                tempCost = costValue
+            }
+            
+        }
+        print("\(tempDroid.index)")
+
+        return tempDroid
+    }
 }
 
 

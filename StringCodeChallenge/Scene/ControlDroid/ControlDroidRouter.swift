@@ -11,7 +11,6 @@ import Foundation
 class ControlDroidRouter {
     weak var viewController: ControlDroidViewController?
 
-    func navigateToSomewhere() {
-        
+    func navigateToDroid(droid:Droid) {
     }
 }

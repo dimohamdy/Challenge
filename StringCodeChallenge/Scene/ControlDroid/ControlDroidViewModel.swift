@@ -17,10 +17,11 @@ class ControlDroidViewModel:BaseViewModel {
     private var ySector = Variable<String?>("")
     private var currentState = Variable<String?>("")
 
-    
+    private var stateOfR2D2 = Variable<Bool?>(false)
     
      var xSectorInput = Variable<String?>("")
      var ySectorInput = Variable<String?>("")
+    
     
     var droidNameObservable: Observable<String?> {
         return droidName.asObservable()
@@ -47,30 +48,45 @@ class ControlDroidViewModel:BaseViewModel {
         return currentState.asObservable()
     }
     
+    var foundR2D2Observable: Observable<Bool?> {
+        return stateOfR2D2.asObservable()
+    }
     
     var droid: Droid!
     init(droid: Droid) {
         super.init()
         self.droid = droid
         self.droidName.value = "Droid \(droid.index)"
+        print("Droid \(droid.index)")
         self.xSector.value = "\(droid.curretSector.x)"
         self.ySector.value = "\(droid.curretSector.y)"
         self.currentState.value = droid.currentState.localizedDescription
-        
+
         self.submitMoveButtonEnabled.asObserver().subscribe(onNext: { [weak self] in
             let sector = Sector(x: droid.curretSector.x,y: droid.curretSector.y)
             self?.move(to: sector)
         }).disposed(by: self.disposeBag)
     }
     
-    private func move(to sector:Sector){
+    func move(to sector:Sector){
         droid.move(newSector: sector) { [weak self] state in
             self?.currentState.value = state.localizedDescription ?? ""
             self?.xSector.value = "\(droid.curretSector.x)"
             self?.ySector.value = "\(droid.curretSector.y)"
+            
+            switch state {
+            case .stateOfR2D2(let foundState) :
+               stateOfR2D2.value = foundState
+            default:
+                break
+            }
+
         }
     }
-    
+
+    func getValidatorDroid() -> Droid {
+        return droid.getNeaestDroid()
+    }
      func move(){
         guard let x = Int(self.xSectorInput.value ?? ""),let y = Int(self.ySectorInput.value ?? "") else {
             return
@@ -93,6 +109,9 @@ class ControlDroidViewModel:BaseViewModel {
         }
         move(to: sector)
     }
+    
+    
+    
 
 }
 enum Direction : String{
