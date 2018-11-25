@@ -53,4 +53,22 @@ class DroidTest: XCTestCase {
     }
     
 
+    func testNearestDroid(){
+        let curretDroid:Droid = Droid(index: 0, curretSector: Sector(x: 5, y: 5))
+        
+        
+        let droid1:Droid = Droid(index: 1, curretSector: Sector(x: 1, y: 1))
+        let droid2:Droid = Droid(index: 2, curretSector: Sector(x: 2, y: 2))
+        let droid3:Droid = Droid(index: 3, curretSector: Sector(x: 3, y: 3)) //nearest one
+        let droid9:Droid = Droid(index: 4, curretSector: Sector(x: 9, y: 9))
+
+        var droidList:[Droid] = [Droid]()
+        droidList.append(contentsOf: [droid1,droid2,droid3,droid9])
+        
+        let nearestDroid = curretDroid.getNeaestDroid(droidList:droidList)
+        
+        XCTAssertEqual(nearestDroid.curretSector.x,3)
+        XCTAssertEqual(nearestDroid.curretSector.y,3)
+
+    }
 }
