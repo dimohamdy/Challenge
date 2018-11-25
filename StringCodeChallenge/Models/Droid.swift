@@ -19,6 +19,7 @@ class Droid {
 
     }
      func move(newSector:Sector,completioan:(_ state:State) -> Void) {
+        //simulate delay with sleep funtion
         sleep(1)
         currentState = .reciveCommand
         completioan(.reciveCommand)
