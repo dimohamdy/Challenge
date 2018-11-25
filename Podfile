@@ -11,8 +11,8 @@ target 'StringCodeChallenge' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   rxswift_pods
-  pod 'SwiftMessages','6.0.1'
-  pod 'PKHUD', '~> 5.0'
+#  pod 'SwiftMessages','6.0.1'
+#  pod 'PKHUD', '~> 5.0'
   # Pods for StringCodeChallenge
 
   target 'StringCodeChallengeTests' do
